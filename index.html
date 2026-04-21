@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lotto Number Generator</title>
+  <title>Daily Bible Verse</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
@@ -13,9 +13,12 @@
       <div class="slider round"></div>
     </label>
   </div>
-  <h1>Lotto Number Generator</h1>
-  <div id="numbers"></div>
-  <button onclick="generateNumbers()">Generate Numbers</button>
+  <h1>Bible Verse Recommendation</h1>
+  <div id="verse-container">
+    <p id="verse-text">Press the button to receive a word of God.</p>
+    <p id="verse-reference"></p>
+  </div>
+  <button onclick="getRandomVerse()">Get a Verse</button>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>

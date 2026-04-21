@@ -3,67 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Daily Bible Verse Recommendation - Find comfort and wisdom through curated Bible verses and spiritual reflections.">
   <meta name="google-adsense-account" content="ca-pub-6475751847890621">
-  <title>Daily Bible Verse</title>
+  <title>Daily Bible Verse | Comfort & Wisdom</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6475751847890621"
      crossorigin="anonymous"></script>
   <link href='./style.css' rel='stylesheet'>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="./index.html" class="nav-logo">Bible Verse</a>
+      <ul class="nav-menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="theme-switch-wrapper">
     <label class="theme-switch" for="checkbox">
       <input type="checkbox" id="checkbox" />
       <div class="slider round"></div>
     </label>
   </div>
-  <h1>Bible Verse Recommendation</h1>
-  <div id="verse-container">
-    <p id="verse-text">Press the button to receive a word of God.</p>
-    <p id="verse-reference"></p>
-  </div>
-  <button onclick="getRandomVerse()">Get a Verse</button>
 
-  <div id="contact-container">
-    <h2>Partnership Inquiry</h2>
-    <form action="https://formspree.io/f/mdaylqqe" method="POST">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+  <main>
+    <h1>Bible Verse Recommendation</h1>
+    <div id="verse-container">
+      <p id="verse-text">Press the button to receive a word of God.</p>
+      <p id="verse-reference"></p>
+      <div class="reflection-box">
+        <h3>Reflection</h3>
+        <p id="verse-reflection">Click the button below to see a spiritual reflection for this verse.</p>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" placeholder="Your email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="How can we work together?" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Send Inquiry</button>
-    </form>
-  </div>
+    </div>
+    <button onclick="getRandomVerse()">Get a Verse</button>
 
-  <div id="comments-container">
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilder-ojkybk3hdi.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+    <section id="contact-container">
+      <h2>Partnership Inquiry</h2>
+      <p>Have a question or a partnership proposal? Reach out to us.</p>
+      <form action="https://formspree.io/f/mdaylqqe" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="Your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="How can we work together?" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Inquiry</button>
+      </form>
+    </section>
 
+    <section id="comments-container">
+      <h2>Community Discussion</h2>
+      <div id="disqus_thread"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Daily Bible Verse. All rights reserved.</p>
+  </footer>
+
+  <script>
+      (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://productbuilder-ojkybk3hdi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
   <script defer type="text/javascript" src="./main.js"></script>
 </body>
 </html>

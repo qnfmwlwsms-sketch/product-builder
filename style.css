@@ -70,6 +70,69 @@ button:active {
   transform: scale(0.98);
 }
 
+#contact-container {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  text-align: left;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #contact-container {
+  background-color: #2d2d2d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+#contact-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .form-group input, body.dark-mode .form-group textarea {
+  background-color: #3d3d3d;
+  border-color: #4d4d4d;
+  color: #e0e0e0;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .theme-switch-wrapper {
   display: flex;
   align-items: center;

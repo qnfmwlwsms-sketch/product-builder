@@ -1,4 +1,9 @@
 const verseContainer = document.getElementById("verse");
+const themeToggle = document.getElementById("checkbox");
+
+themeToggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
 async function getVerse() {
   verseContainer.textContent = "Loading...";

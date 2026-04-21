@@ -133,6 +133,23 @@ body.dark-mode .form-group input, body.dark-mode .form-group textarea {
   margin-top: 1rem;
 }
 
+#comments-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #comments-container {
+  background-color: #2d2d2d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
 .theme-switch-wrapper {
   display: flex;
   align-items: center;

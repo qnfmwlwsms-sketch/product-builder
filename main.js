@@ -41,26 +41,32 @@ const verses = [
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme) {
   document.body.classList.add(currentTheme);
-  if (currentTheme === "dark-mode") {
+  if (currentTheme === "dark-mode" && themeToggle) {
     themeToggle.checked = true;
   }
 }
 
-themeToggle.addEventListener("change", () => {
-  if (themeToggle.checked) {
-    document.body.classList.add("dark-mode");
-    localStorage.setItem("theme", "dark-mode");
-  } else {
-    document.body.classList.remove("dark-mode");
-    localStorage.setItem("theme", "light-mode");
-  }
-});
+if (themeToggle) {
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light-mode");
+    }
+  });
+}
 
 function getRandomVerse() {
   const randomIndex = Math.floor(Math.random() * verses.length);
   const verse = verses[randomIndex];
-  verseText.textContent = `"${verse.text}"`;
-  verseReference.textContent = `- ${verse.reference}`;
+  if (verseText) {
+    verseText.textContent = `"${verse.text}"`;
+  }
+  if (verseReference) {
+    verseReference.textContent = `- ${verse.reference}`;
+  }
   if (verseReflection) {
     verseReflection.textContent = verse.reflection;
   }
